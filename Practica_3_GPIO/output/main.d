@@ -1,8 +1,7 @@
 .\output\main.o: main.c
-.\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include\core_cm4.h
-.\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include\core_cmInstr.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include\core_cmFunc.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include\core_cm4_simd.h
@@ -35,4 +34,4 @@
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h
-.\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery\stm32f4_discovery.h
+.\output\main.o: D:\Proyectos\GitHub S-Bou\Libraries_stm32f4\mygpio.h

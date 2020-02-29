@@ -1,5 +1,5 @@
-.\output\mygpio.o: ..\..\Libraries\mygpio.c
-.\output\mygpio.o: ..\..\Libraries\mygpio.h
+.\output\mygpio.o: D:\Proyectos\GitHub S-Bou\Libraries_stm32f4\mygpio.c
+.\output\mygpio.o: D:\Proyectos\GitHub S-Bou\Libraries_stm32f4\mygpio.h
 .\output\mygpio.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include\stm32f4xx.h
 .\output\mygpio.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include\core_cm4.h
 .\output\mygpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

@@ -36,6 +36,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+extern int numero_de_pulsaciones;
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
@@ -146,6 +147,23 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f4xx.s).                                               */
 /******************************************************************************/
+
+/**
+  * @brief  This function handles PPP interrupt request.
+  * @param  None
+  * @retval None
+  */
+void EXTI0_IRQHandler(void)
+{
+	if(EXTI_GetITStatus(EXTI_Line0) != RESET)
+	{
+		/* Toggle led green */
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+		numero_de_pulsaciones++;
+		/* Clear the EXTI Line0 pending bit */
+		EXTI_ClearITPendingBit(EXTI_Line0);
+	}
+}
 
 /**
   * @brief  This function handles PPP interrupt request.

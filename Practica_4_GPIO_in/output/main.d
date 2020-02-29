@@ -35,4 +35,4 @@
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\output\main.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h
-.\output\main.o: ..\..\Libraries\mygpio.h
+.\output\main.o: D:\Proyectos\GitHub S-Bou\Libraries_stm32f4\mygpio.h

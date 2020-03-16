@@ -1,7 +1,7 @@
 /*################################### INCLUDES/DEFINES #####################################################*/
 #include "myconfig.h"
 /*################################### VARIABLES ############################################################*/
-
+uint8_t tabla[11] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x18, 0x06};
 /*################################### DESCRIPTION/CONECTIONS ###############################################*/
 /*
 	1. Config pins as exit for leds.
@@ -33,7 +33,7 @@ void GPIO_Output_Config(void) //configura apropiadamente la GPIO
 void GPIO_Input_Config(void) 
 {
 	GPIO_InitTypeDef puerto;
-		/* Enable GPIOA clock */
+	/* Enable GPIOA clock */
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);  
 	
 	puerto.GPIO_Pin  = GPIO_Pin_0; 
@@ -65,7 +65,74 @@ void Configurar_interrupcion(void)
 	NVIC_Init(&NVIC_InitStructure);
 }
 /*################################### FUNCTION 4 ###########################################################*/
-
-
+void DisplayConfig(void)
+{
+        GPIO_InitTypeDef puerto;
+        RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+        puerto.GPIO_Pin   = 0x005F;;
+        puerto.GPIO_Mode  = GPIO_Mode_OUT;
+        puerto.GPIO_OType = GPIO_OType_OD;
+        puerto.GPIO_Speed = GPIO_Speed_2MHz;
+        puerto.GPIO_PuPd  = GPIO_PuPd_UP;
+        GPIO_Init(GPIOD, &puerto);
+}
 /*################################### FUNCTION 5 ###########################################################*/
+void Mostrar(uint8_t piso)
+{
+        uint8_t resultado;
+        resultado = tabla[piso];
+        simul7seg(resultado);
+}
+/*################################### FUNCTION 6 ###########################################################*/
+void simul7seg(uint8_t valor)
+{
+
+switch (valor){
+case 0x40:
+  printf("0");
+  break;
+case 0x79:
+  printf("1");
+  break;
+case 0x24:
+  printf("2");
+  break;
+case 0x30:
+  printf("3");
+  break;
+case 0x19:
+  printf("4");
+  break;
+case 0x12:
+  printf("5");
+  break;
+case 0x02:
+  printf("6");
+  break;
+case 0x78:
+  printf("7");
+  break;
+case 0x00:
+  printf("8");
+  break;
+case 0x18:
+  printf("9");
+  break;
+case 0x06:
+  printf("E");
+  break;
+default:
+  printf("Error");
+  break;
+}
+
+}
+/*################################### FUNCTION 7 ###########################################################*/
+
+/*################################### FUNCTION 8 ###########################################################*/
+
+
+
+
+
 

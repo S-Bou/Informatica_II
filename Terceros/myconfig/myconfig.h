@@ -13,10 +13,11 @@ extern "C" {
 /*################################### FUNCTIONS ############################################################*/
 void GPIO_Output_Config(void);
 void GPIO_Input_Config(void);
-void Configurar_interrupcion(void);
+void EXT_INT_Config(void);
 void DisplayConfig(void);
 void Mostrar(uint8_t);
 void simul7seg(uint8_t);
+void MostrarPulsaciones(uint8_t);
 /*##########################################################################################################*/
 #ifdef __cplusplus
 }

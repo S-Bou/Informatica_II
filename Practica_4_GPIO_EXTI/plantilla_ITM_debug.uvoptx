@@ -269,8 +269,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Proyectos\GitHub S-Bou\Libraries_stm32f4\mygpio.c</PathWithFileName>
-      <FilenameWithoutPath>mygpio.c</FilenameWithoutPath>
+      <PathWithFileName>..\Terceros\myconfig\myconfig.c</PathWithFileName>
+      <FilenameWithoutPath>myconfig.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

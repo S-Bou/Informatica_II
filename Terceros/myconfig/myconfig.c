@@ -75,64 +75,38 @@ void EXT_INT_Config(void)
 void DisplayConfig(void)
 {
         GPIO_InitTypeDef puerto;
-        RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-        puerto.GPIO_Pin   = 0x005F;;
+        RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+        puerto.GPIO_Pin   = 0x007F;;
         puerto.GPIO_Mode  = GPIO_Mode_OUT;
         puerto.GPIO_OType = GPIO_OType_OD;
-        puerto.GPIO_Speed = GPIO_Speed_2MHz;
+        puerto.GPIO_Speed = GPIO_Speed_25MHz;
         puerto.GPIO_PuPd  = GPIO_PuPd_UP;
-        GPIO_Init(GPIOD, &puerto);
+        GPIO_Init(GPIOB, &puerto);
 }
 /*################################### FUNCTION 5 ###########################################################*/
 void Mostrar(uint8_t piso)
 {
-        uint8_t resultado;
-        resultado = tabla[piso];
-        simul7seg(resultado);
+		uint8_t resultado = tabla[piso];
+		simul7seg(resultado);
 }
 /*################################### FUNCTION 6 ###########################################################*/
 void simul7seg(uint8_t valor)
 {
-
-switch (valor){
-case 0x40:
-  printf("0");
-  break;
-case 0x79:
-  printf("1");
-  break;
-case 0x24:
-  printf("2");
-  break;
-case 0x30:
-  printf("3");
-  break;
-case 0x19:
-  printf("4");
-  break;
-case 0x12:
-  printf("5");
-  break;
-case 0x02:
-  printf("6");
-  break;
-case 0x78:
-  printf("7");
-  break;
-case 0x00:
-  printf("8");
-  break;
-case 0x18:
-  printf("9");
-  break;
-case 0x06:
-  printf("E");
-  break;
-default:
-  printf("Error");
-  break;
-}
-
+	switch (valor)
+	{
+	case 0x40: GPIO_SetBits(GPIOB, 0x0001); GPIO_ResetBits(GPIOB, 0x007E); break;
+	case 0x79: GPIO_SetBits(GPIOB, 0x004F); GPIO_ResetBits(GPIOB, 0x0030); break;
+	case 0x24: GPIO_SetBits(GPIOB, 0x0012); GPIO_ResetBits(GPIOB, 0x006D); break;
+	case 0x30: GPIO_SetBits(GPIOB, 0x0006); GPIO_ResetBits(GPIOB, 0x0079); break;
+	case 0x19: GPIO_SetBits(GPIOB, 0x004C); GPIO_ResetBits(GPIOB, 0x0033); break;
+	case 0x12: GPIO_SetBits(GPIOB, 0x0024); GPIO_ResetBits(GPIOB, 0x005B); break;
+	case 0x02: GPIO_SetBits(GPIOB, 0x0020); GPIO_ResetBits(GPIOB, 0x005F); break;
+	case 0x78: GPIO_SetBits(GPIOB, 0x000F); GPIO_ResetBits(GPIOB, 0x0070); break;
+	case 0x00: GPIO_SetBits(GPIOB, 0x0000); GPIO_ResetBits(GPIOB, 0x007F); break;
+	case 0x18: GPIO_SetBits(GPIOB, 0x000C); GPIO_ResetBits(GPIOB, 0x0073); break;
+	case 0x06: GPIO_SetBits(GPIOB, 0x0001); GPIO_ResetBits(GPIOB, 0x007E); break;
+	default:   break;
+	}
 }
 /*################################### FUNCTION 7 ###########################################################*/
 void MostrarPulsaciones(uint8_t pulse)
@@ -140,7 +114,24 @@ void MostrarPulsaciones(uint8_t pulse)
 	printf("Numero de pulsaciones: %d\n", pulsaciones);
 }
 /*################################### FUNCTION 8 ###########################################################*/
-
+//void simul7seg(uint8_t valor)
+//{
+//	switch (valor)
+//	{
+//	case 0x40: printf("0"); GPIO_SetBits(GPIOB, 0x0001); break;
+//	case 0x79: printf("1"); GPIO_SetBits(GPIOB, 0x004F); break;
+//	case 0x24: printf("2"); GPIO_SetBits(GPIOB, 0x0012); break;
+//	case 0x30: printf("3"); GPIO_SetBits(GPIOB, 0x000C); break;
+//	case 0x19: printf("4"); GPIO_SetBits(GPIOB, 0x000C); break;
+//	case 0x12: printf("5"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	case 0x02: printf("6"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	case 0x78: printf("7"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	case 0x00: printf("8"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	case 0x18: printf("9"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	case 0x06: printf("E"); GPIO_ResetBits(GPIOB, 0x000C); break;
+//	default: printf("Error"); break;
+//	}
+//}
 /*################################### FUNCTION 9 ###########################################################*/
 
 /*################################### FUNCTION 10 ##########################################################*/

@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stm32f4xx.h>
-#include "mygpio.h"
+#include "myconfig.h"
 
 int numero_de_pulsaciones;
 
@@ -18,7 +18,7 @@ int main(void)
 {
    GPIO_Output_Config();
 	 GPIO_Input_Config();
-	 Configurar_interrupcion();
+	 EXT_INT_Config();
 
    
    while(1)

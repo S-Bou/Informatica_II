@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000000000001000000ffffffffffffffffffffffffffffffff4c010000050000007d070000fb030000</PLACEMENT>
+  <PLACEMENT>2c0000000000000001000000ffffffffffffffffffffffffffffffff4008000022000000710e000018040000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="STARTUP"/>
  </FRAME>
@@ -400,19 +400,19 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="30" x="798" flags="00000008" y="885" h="13" pid="103" iid="1">
+   <POPUP w="226" x="798" flags="00000008" y="885" h="182" pid="103" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="320" x="818" flags="0000000b" y="800" h="240" pid="105" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="22" x="838" flags="00000008" y="925" h="18" pid="3701" iid="1">
+   <POPUP w="170" x="838" flags="00000008" y="925" h="237" pid="3701" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="22" x="858" flags="00000008" y="945" h="18" pid="3801" iid="1">
+   <POPUP w="170" x="858" flags="00000008" y="945" h="237" pid="3801" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="22" x="878" flags="00000008" y="965" h="18" pid="3901" iid="1">
+   <POPUP w="170" x="878" flags="00000008" y="965" h="237" pid="3901" iid="1">
     <PROPERTIES/>
    </POPUP>
   </PWI>

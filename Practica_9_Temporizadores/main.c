@@ -7,7 +7,6 @@
    @author Equipo ARM Power http://armpower.blogs.upv.es/
    @date 2017/03/06
 */
-
 #include <stdio.h>
 #include <stm32f4xx.h>
 #include "myconfig.h"
@@ -15,12 +14,8 @@
 int main(void)
 {
 	GPIO_Output_Config(); //Configura los cuatro leds
-	GPIO_Input_Config();  //Configura el pulsador
-	EXT_INT_Config();			//Configura las interrupciones externas
-   
-	while (1) 
-	{
-		
-	}      
+	
+	SysTick_Config(168000000*0.001);
+       
 }
 

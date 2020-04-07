@@ -134,7 +134,7 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4103</DriverSelection>
+            <DriverSelection>4101</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F4XX</Define>
               <Undefine></Undefine>
-              <IncludePath>.;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\terceros\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery;..\Terceros\myconfig</IncludePath>
+              <IncludePath>.;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include;..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc;..\terceros\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery;..\Terceros\myconfig;..\Practica_9_Temporizadores</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
